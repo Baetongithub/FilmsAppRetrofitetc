@@ -66,7 +66,7 @@ public class DetailsFilmsFragment extends Fragment {
                     detailsFilmsBinding.originalTitleDetails.setText(getString(R.string.original_title_) + response.body().getOriginal_title());
                     detailsFilmsBinding.descriptionDetails.setText(response.body().getDescription());
                 } else {
-                    Toast.makeText(requireContext(), R.string.something_went_wrong + response.message(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(requireContext(), R.string.something_went_wrong, Toast.LENGTH_SHORT).show();
                 }
             }
 

@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_my_films"
         android:name="com.geektech.filmsappretrofitetc.ui.my_films.MyFilmsFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_my_films" />

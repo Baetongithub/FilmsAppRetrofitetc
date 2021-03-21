@@ -18,9 +18,7 @@ import com.geektech.filmsappretrofitetc.adapters.HomeAdapter;
 import com.geektech.filmsappretrofitetc.databinding.FragmentHomeBinding;
 import com.geektech.filmsappretrofitetc.models.AllFilms;
 import com.geektech.filmsappretrofitetc.network.FilmsAPIClient;
-import com.geektech.filmsappretrofitetc.utils.App;
 import com.geektech.filmsappretrofitetc.utils.Constants;
-import com.geektech.filmsappretrofitetc.utils.OnItemClickListener;
 
 import java.util.ArrayList;
 import java.util.List;

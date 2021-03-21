@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private void initNavController() {
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home,
-                R.id.navigation_dashboard)
+                R.id.navigation_my_films)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
             ArrayList<Integer> list = new ArrayList<>();
             list.add(R.id.navigation_home);
-            list.add(R.id.navigation_dashboard);
+            list.add(R.id.navigation_my_films);
             if (list.contains(destination.getId())) {
                 mainBinding.navView.setVisibility(View.VISIBLE);
             } else {
