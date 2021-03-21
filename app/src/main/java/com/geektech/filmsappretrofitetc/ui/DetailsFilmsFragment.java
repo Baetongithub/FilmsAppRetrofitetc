@@ -17,12 +17,8 @@ import androidx.navigation.Navigation;
 import com.geektech.filmsappretrofitetc.R;
 import com.geektech.filmsappretrofitetc.databinding.FragmentDetailsFilmsBinding;
 import com.geektech.filmsappretrofitetc.models.AllFilms;
-import com.geektech.filmsappretrofitetc.models.Location;
-import com.geektech.filmsappretrofitetc.network.FilmsAPI;
 import com.geektech.filmsappretrofitetc.network.FilmsAPIClient;
 import com.geektech.filmsappretrofitetc.utils.Constants;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -66,7 +62,7 @@ public class DetailsFilmsFragment extends Fragment {
                     detailsFilmsBinding.originalTitleDetails.setText(getString(R.string.original_title_) + response.body().getOriginal_title());
                     detailsFilmsBinding.descriptionDetails.setText(response.body().getDescription());
                 } else {
-                    Toast.makeText(requireContext(), R.string.something_went_wrong, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(requireContext(), R.string.something_went_wrong + response.message(), Toast.LENGTH_SHORT).show();
                 }
             }
 
