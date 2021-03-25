@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase;
 
 import com.geektech.filmsappretrofitetc.models.AllFilms;
 
-@Database(entities = {AllFilms.class}, version = 1)
+@Database(entities = {AllFilms.class}, version = 2)
 public abstract class AppDatabase extends RoomDatabase {
     public abstract FilmsDao filmsDao();
 }

@@ -36,8 +36,9 @@
             android:layout_height="wrap_content"
             android:layout_above="@id/rt_score_home"
             android:text="@string/director"
+            android:layout_marginTop="5dp"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/release_date_home"

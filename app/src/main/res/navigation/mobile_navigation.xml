@@ -18,7 +18,7 @@
         tools:layout="@layout/fragment_my_films" />
 
     <fragment
-        android:id="@+id/detailsFilmsFragment"
+        android:id="@+id/detailedFilmsFragment"
         android:name="com.geektech.filmsappretrofitetc.ui.DetailsFilmsFragment"
         android:label="More about film"
         tools:layout="@layout/fragment_details_films" />

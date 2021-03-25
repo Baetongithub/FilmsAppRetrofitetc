@@ -36,5 +36,10 @@
     <string name="eye_colors">Eye colors</string>
     <string name="hair_colors">Hair colors</string>
     <string name="saved_films">Saved films</string>
+    <string name="scan_qr_code_n_to_see_more_about_this_film">Scan QR-code to see more about this film</string>
+    <string name="cancel">Cancel</string>
+    <string name="scan_film">Scan film</string>
+    <string name="add">Add</string>
+    <string name="get_qr_code">Get QR-code</string>
 
 </resources>

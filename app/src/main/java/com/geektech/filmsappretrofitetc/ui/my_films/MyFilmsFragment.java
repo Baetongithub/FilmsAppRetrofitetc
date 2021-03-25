@@ -49,8 +49,8 @@ public class MyFilmsFragment extends Fragment {
 
     private void openDetailsSavedFilms(AllFilms allFilms) {
         Bundle bundle = new Bundle();
-        bundle.putSerializable(Constants.ID, allFilms.getString());
+        bundle.putSerializable(Constants.ID, allFilms.getID());
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
-        navController.navigate(R.id.detailsFilmsFragment, bundle);
+        navController.navigate(R.id.detailedFilmsFragment, bundle);
     }
 }

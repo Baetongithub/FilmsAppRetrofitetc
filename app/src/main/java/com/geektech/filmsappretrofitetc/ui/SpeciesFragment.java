@@ -13,9 +13,7 @@ import androidx.fragment.app.Fragment;
 import com.geektech.filmsappretrofitetc.R;
 import com.geektech.filmsappretrofitetc.adapters.SpeciesAdapter;
 import com.geektech.filmsappretrofitetc.databinding.FragmentSpeciesBinding;
-import com.geektech.filmsappretrofitetc.models.Location;
 import com.geektech.filmsappretrofitetc.models.Species;
-import com.geektech.filmsappretrofitetc.network.FilmsAPI;
 import com.geektech.filmsappretrofitetc.network.FilmsAPIClient;
 
 import java.util.ArrayList;

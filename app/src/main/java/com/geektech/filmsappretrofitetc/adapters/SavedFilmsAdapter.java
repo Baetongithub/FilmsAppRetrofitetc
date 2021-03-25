@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.geektech.filmsappretrofitetc.R;
 import com.geektech.filmsappretrofitetc.databinding.ItemSavedFilmsBinding;
 import com.geektech.filmsappretrofitetc.models.AllFilms;
+import com.geektech.filmsappretrofitetc.utils.Constants;
 import com.geektech.filmsappretrofitetc.utils.OnItemClickListener;
 
 import java.util.ArrayList;
@@ -68,11 +69,11 @@ public class SavedFilmsAdapter extends RecyclerView.Adapter<SavedFilmsAdapter.Vi
 
         @SuppressLint("SetTextI18n")
         public void onBind(AllFilms allFilms) {
-            itemSavedFilmsBinding.directorHome.setText(R.string.director_ + allFilms.getDirector());
+            itemSavedFilmsBinding.directorHome.setText(Constants.DIRECTOR + allFilms.getDirector());
             itemSavedFilmsBinding.titleHome.setText(allFilms.getTitle());
-            itemSavedFilmsBinding.rtScoreHome.setText(allFilms.getRt_score());
-            itemSavedFilmsBinding.runningTimeHome.setText(allFilms.getRunning_time());
-            itemSavedFilmsBinding.releaseDateHome.setText(allFilms.getRelease_date());
+            itemSavedFilmsBinding.rtScoreHome.setText(Constants.RT_SCORE + allFilms.getRt_score());
+            itemSavedFilmsBinding.runningTimeHome.setText(Constants.RUNNING_TIME + allFilms.getRunning_time());
+            itemSavedFilmsBinding.releaseDateHome.setText(Constants.RELEASE_DATE + allFilms.getRelease_date());
         }
     }
 }
