@@ -52,15 +52,17 @@ public class DetailsFilmsFragment extends Fragment {
             @Override
             public void onResponse(@NonNull Call<AllFilms> call, @NonNull Response<AllFilms> response) {
                 if (response.body() != null) {
-                    detailsFilmsBinding.titleDetails.setText(response.body().getTitle());
-                    detailsFilmsBinding.directorDetails.setText(getString(R.string.director_) + response.body().getDirector());
-                    detailsFilmsBinding.releaseDateDetails.setText(getString(R.string.release_date_) + response.body().getRelease_date());
-                    detailsFilmsBinding.runningTimeDetails.setText(getString(R.string.running_time_) + response.body().getRunning_time());
-                    detailsFilmsBinding.rtScoreDetails.setText(getString(R.string.rt_score_) + response.body().getRt_score());
-                    detailsFilmsBinding.producerDetails.setText(getString(R.string.producer_) + response.body().getProducer());
-                    detailsFilmsBinding.originalTitleRomanisedDetails.setText(getString(R.string.original_title_roman) + response.body().getOriginal_title_romanised());
-                    detailsFilmsBinding.originalTitleDetails.setText(getString(R.string.original_title_) + response.body().getOriginal_title());
-                    detailsFilmsBinding.descriptionDetails.setText(response.body().getDescription());
+                    if (isAdded()) {
+                        detailsFilmsBinding.titleDetails.setText(response.body().getTitle());
+                        detailsFilmsBinding.directorDetails.setText(getString(R.string.director_) + response.body().getDirector());
+                        detailsFilmsBinding.releaseDateDetails.setText(getString(R.string.release_date_) + response.body().getRelease_date());
+                        detailsFilmsBinding.runningTimeDetails.setText(getString(R.string.running_time_) + response.body().getRunning_time());
+                        detailsFilmsBinding.rtScoreDetails.setText(getString(R.string.rt_score_) + response.body().getRt_score());
+                        detailsFilmsBinding.producerDetails.setText(getString(R.string.producer_) + response.body().getProducer());
+                        detailsFilmsBinding.originalTitleRomanisedDetails.setText(getString(R.string.original_title_roman) + response.body().getOriginal_title_romanised());
+                        detailsFilmsBinding.originalTitleDetails.setText(getString(R.string.original_title_) + response.body().getOriginal_title());
+                        detailsFilmsBinding.descriptionDetails.setText(response.body().getDescription());
+                    }
                 } else {
                     Toast.makeText(requireContext(), R.string.something_went_wrong + response.message(), Toast.LENGTH_SHORT).show();
                 }

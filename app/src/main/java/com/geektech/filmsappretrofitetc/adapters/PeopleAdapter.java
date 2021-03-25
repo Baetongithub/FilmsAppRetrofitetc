@@ -1,5 +1,6 @@
 package com.geektech.filmsappretrofitetc.adapters;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.geektech.filmsappretrofitetc.R;
 import com.geektech.filmsappretrofitetc.databinding.ItemPeopleBinding;
 import com.geektech.filmsappretrofitetc.models.People;
+import com.geektech.filmsappretrofitetc.utils.Constants;
 
 import java.util.List;
 
@@ -47,12 +49,13 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.PeopleView
             itemPeopleBinding = ItemPeopleBinding.bind(itemView);
         }
 
+        @SuppressLint("SetTextI18n")
         private void onBind(People people) {
-            itemPeopleBinding.namePeople.setText(people.getName());
-            itemPeopleBinding.agePeople.setText(people.getAge());
-            itemPeopleBinding.genderPeople.setText(people.getGender());
-            itemPeopleBinding.hairColorPeople.setText(people.getHair_color());
-            itemPeopleBinding.eyeColorPeople.setText(people.getEye_color());
+            itemPeopleBinding.namePeople.setText(Constants.NAME + people.getName());
+            itemPeopleBinding.agePeople.setText(Constants.AGE + people.getAge());
+            itemPeopleBinding.genderPeople.setText(Constants.GENDER + people.getGender());
+            itemPeopleBinding.hairColorPeople.setText(Constants.HAIR_COLOR + people.getHair_color());
+            itemPeopleBinding.eyeColorPeople.setText(Constants.EYE_COLOR + people.getEye_color());
         }
     }
 }

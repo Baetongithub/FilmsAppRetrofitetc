@@ -1,5 +1,6 @@
 package com.geektech.filmsappretrofitetc.adapters;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import com.geektech.filmsappretrofitetc.R;
 import com.geektech.filmsappretrofitetc.databinding.ItemHomeFilmsBinding;
 import com.geektech.filmsappretrofitetc.models.AllFilms;
 import com.geektech.filmsappretrofitetc.utils.App;
+import com.geektech.filmsappretrofitetc.utils.Constants;
 import com.geektech.filmsappretrofitetc.utils.OnItemClickListener;
 
 import java.util.List;
@@ -57,6 +59,8 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
         public HomeViewHolder(@NonNull View itemView) {
             super(itemView);
             itemHomeFilmsBinding = ItemHomeFilmsBinding.bind(itemView);
+            itemHomeFilmsBinding.imageGetQrCode.setOnClickListener(v -> onItemClickListener.onImageClick(getAdapterPosition()));
+            itemView.setOnClickListener(v -> onItemClickListener.onClick(getAdapterPosition()));
             itemHomeFilmsBinding.imageAddHome.setOnClickListener(v -> {
                 AllFilms allFilms = getItem(getAdapterPosition());
                 if (allFilms != null) {
@@ -64,15 +68,15 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
                     itemHomeFilmsBinding.imageAddHome.setImageResource(R.drawable.ic_round_bookmark_added_24);
                 }
             });
-            itemView.setOnClickListener(v -> onItemClickListener.onClick(getAdapterPosition()));
         }
 
+        @SuppressLint("SetTextI18n")
         private void onBind(AllFilms getAllFilms) {
             itemHomeFilmsBinding.titleHome.setText(getAllFilms.getTitle());
-            itemHomeFilmsBinding.directorHome.setText(getAllFilms.getDirector());
-            itemHomeFilmsBinding.rtScoreHome.setText(getAllFilms.getRt_score());
-            itemHomeFilmsBinding.runningTimeHome.setText(getAllFilms.getRunning_time());
-            itemHomeFilmsBinding.releaseDateHome.setText(getAllFilms.getRelease_date());
+            itemHomeFilmsBinding.directorHome.setText(Constants.DIRECTOR +getAllFilms.getDirector());
+            itemHomeFilmsBinding.rtScoreHome.setText(Constants.RT_SCORE +getAllFilms.getRt_score());
+            itemHomeFilmsBinding.runningTimeHome.setText(Constants.RUNNING_TIME +getAllFilms.getRunning_time());
+            itemHomeFilmsBinding.releaseDateHome.setText(Constants.RELEASE_DATE +getAllFilms.getRelease_date());
         }
     }
 }

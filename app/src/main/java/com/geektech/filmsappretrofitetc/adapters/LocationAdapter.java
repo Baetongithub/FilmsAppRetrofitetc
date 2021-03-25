@@ -1,5 +1,6 @@
 package com.geektech.filmsappretrofitetc.adapters;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.geektech.filmsappretrofitetc.R;
 import com.geektech.filmsappretrofitetc.databinding.ItemLocationBinding;
 import com.geektech.filmsappretrofitetc.models.Location;
+import com.geektech.filmsappretrofitetc.utils.Constants;
 
 import java.util.List;
 
@@ -47,11 +49,12 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.Locati
             itemLocationBinding = ItemLocationBinding.bind(itemView);
         }
 
+        @SuppressLint("SetTextI18n")
         private void onBind(Location location) {
-            itemLocationBinding.nameLocation.setText(location.getName());
-            itemLocationBinding.climateLocation.setText(location.getClimate());
-            itemLocationBinding.terrainLocation.setText(location.getTerrain());
-            itemLocationBinding.surfaceWaterLocation.setText(location.getSurface_water());
+            itemLocationBinding.nameLocation.setText(Constants.NAME + location.getName());
+            itemLocationBinding.climateLocation.setText(Constants.CLIMATE + location.getClimate());
+            itemLocationBinding.terrainLocation.setText(Constants.TERRAIN + location.getTerrain());
+            itemLocationBinding.surfaceWaterLocation.setText(Constants.SURFACE_WATER + location.getSurface_water());
         }
     }
 }

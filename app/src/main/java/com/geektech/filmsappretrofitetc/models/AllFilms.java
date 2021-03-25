@@ -16,7 +16,7 @@ public class AllFilms implements Serializable {
     @NonNull
     @PrimaryKey
     @SerializedName("id")
-    private String string;
+    private String ID;
 
     @SerializedName("title")
     private String title;
@@ -48,8 +48,8 @@ public class AllFilms implements Serializable {
     public AllFilms() {
     }
 
-    public void setString(@NotNull String string) {
-        this.string = string;
+    public void setID(@NotNull String ID) {
+        this.ID = ID;
     }
 
     public void setTitle(String title) {
@@ -89,8 +89,8 @@ public class AllFilms implements Serializable {
     }
 
     @NotNull
-    public String getString() {
-        return string;
+    public String getID() {
+        return ID;
     }
 
     public String getTitle() {
