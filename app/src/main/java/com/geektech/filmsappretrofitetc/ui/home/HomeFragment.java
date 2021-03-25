@@ -95,7 +95,7 @@ public class HomeFragment extends Fragment {
         });
     }
 
-    //todo 8th Home Work
+    // todo 8th Home Work
     private void openBottomSheet(AllFilms allFilms) {
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(requireContext(), R.style.BottomSheetDialogTheme);
         LayoutBottomSheetDialogBinding dialogBinding = LayoutBottomSheetDialogBinding.inflate(getLayoutInflater());
